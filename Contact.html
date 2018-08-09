@@ -1,0 +1,133 @@
+<!DOCTYPE html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Graphic Design </title>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+
+<body>
+
+<div id="om">
+
+<div id="Rubrik">
+  <h1> Contact </h1>
+</div>
+
+<div id="nav1"><br>
+
+ <div id="nav2"><br>
+
+  <div id="nav_Wrapper"><br> 
+
+    <head ><h1> </h1> </head>
+
+    <ul>
+
+      <li><A href="Index.html"> Home </A></li>
+      <li><A href=""> Works </A>
+         
+         <ul >
+            <li><A href="Poster.html" class=""> Poster </A></li>
+            <br>
+            <li><A href="Catalog.html" class=""> Catalog </A></li>
+            <br>
+            <li><A href="Logo.html" class=""> Logo </A></li> 
+           
+                 
+         </ul> 
+
+      </li>     
+      <li><A href="Contact.html"> Contact </A></li>
+
+    </ul>
+
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+
+<form name="login" method = "post" action= "mailto:example@yahoo.com" onsubmit= "return Validate()" >
+
+<div class="login">
+    
+     <input type="text"  size="20" maxlength="12" id="name" placeholder="name"><br>
+
+     <input type="text"  size ="20" id="email" placeholder="email"><br>
+
+     <input type="text"  size ="20" maxlength="20" id="comment" placeholder="comment"><br>
+
+     <input type="submit"  value="Send" > 
+    
+</div>
+
+</form>
+
+<p id="invalid_1"> </p>
+<p id="invalid_2"> </p>
+<p id="invalid_3"> </p>
+
+<script type="text/javascript">
+
+  var invalid = 0;
+
+function Validate()
+
+{
+  invalid = 0;
+  
+//Name
+   if (document.getElementById("name").value =="") {
+
+       document.getElementById("invalid_1").innerHTML = "You must type in a name ";
+       invalid += 1;
+
+}
+else{
+
+       document.getElementById("invalid_1").innerHTML = "";
+}
+
+//email
+if((document.getElementById("email").value.indexOf("@")) == -1 ){
+
+  document.getElementById("invalid_2").innerHTML = " Invalid Email ";
+  invalid += 1;
+}
+else{
+
+  document.getElementById("invalid_2").innerHTML = "";
+}
+
+//comment
+ if (document.getElementById("comment").value =="") {
+
+       document.getElementById("invalid_3").innerHTML = "You must type in a comment ";
+       invalid += 1;
+
+}
+else{
+
+       document.getElementById("invalid_3").innerHTML = "";
+}
+
+
+if (invalid != 0){
+
+    return false;
+}
+else {
+
+  return true;
+}
+}
+
+</script>
+</body>
+
+</html>
